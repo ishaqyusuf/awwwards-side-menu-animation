@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.anim-menu-btn {
+  @apply w-[100px] h-[40px] rounded-[25px] cursor-pointer relative  overflow-hidden;
+}
+.slider {
+  @apply relative w-full h-full;
+}
+.el {
+  @apply w-full h-full bg-[#c9fdfd74] flex justify-center items-center uppercase;
+}
+.el:nth-of-type(2) {
+  @apply absolute top-[100%] bg-black text-white;
+}

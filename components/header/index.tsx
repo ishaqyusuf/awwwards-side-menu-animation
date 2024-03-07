@@ -1,18 +1,14 @@
+"use client";
 import { motion } from "framer-motion";
+import HeaderMenu from "./header-menu";
+import { useState } from "react";
 
-export default function index({ isActive, setIsActive }: any) {
+export default function Header() {
+  const [isActive, setIsActive] = useState(false);
   return (
-    <div
-      onClick={() => {
-        setIsActive(!isActive);
-      }}
-      className={`header ${isActive ? "active" : ""}`}
-    >
-      <motion.div
-        className=""
-        animate={{ top: isActive ? "-100%" : "0" }}
-        transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
-      ></motion.div>
-    </div>
+    <header className="h-12 flex p-4">
+      <div className="flex-1"></div>
+      <HeaderMenu isActive={isActive} setIsActive={setIsActive} />
+    </header>
   );
 }
