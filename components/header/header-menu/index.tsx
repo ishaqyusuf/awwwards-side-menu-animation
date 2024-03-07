@@ -20,15 +20,22 @@ export default function HeaderMenu({ isActive, setIsActive }: Props) {
         transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
       >
         <div className="el">
-          <p>Menu</p>
+          <PerspectiveText label={"Menu"} />
         </div>
         <div className="el">
-          <p>Close</p>
+          <PerspectiveText label={"Close"} close />
         </div>
       </motion.div>
     </div>
   );
 }
+function PerspectiveText({ label, close }: { label: string; close?: boolean }) {
+  return (
+    <div className="perspectiveText w-full h-full flex justify-center items-center">
+      <p className={`${close ? "" : "absolute"}`}>{label}</p>
+    </div>
+  );
+}
 function Btn({ className, children }: any) {
-  return <button className={className}>Click</button>;
+  return <button className={"w-"}>Click</button>;
 }
