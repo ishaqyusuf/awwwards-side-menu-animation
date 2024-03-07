@@ -31,3 +31,8 @@ body {
     text-wrap: balance;
   }
 }
+.header-menu-btn {
+  @apply w-[40px] h-[100px] rounded-[24px] cursor-pointer relative;
+}
+.slider {
+}
